@@ -11,4 +11,13 @@ public class PlanetsController {
     public ModelAndView planetsList() {
         return new ModelAndView("/PlanetsList");
     }
+
+    @GetMapping("/mars")
+    public ModelAndView marsInfo() {
+        ModelAndView marsInfo = new ModelAndView("/MarsInfo");
+        String marsDescription = "The planet Mars is half the size of the Earth.";
+
+        marsInfo.addObject("marsDescription", marsDescription );
+        return marsInfo;
+    }
 }
