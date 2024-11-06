@@ -1,6 +1,10 @@
 package model;
 
+import jakarta.persistence.*;
+
 public class Planet {
+
+    private Long id;
     private String description;
     private Number circumference;
 
