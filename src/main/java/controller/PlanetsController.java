@@ -16,9 +16,10 @@ public class PlanetsController {
     @GetMapping("/mars")
     public ModelAndView marsInfo() {
         ModelAndView marsInfo = new ModelAndView("/MarsInfo");
+        String name = "Mars";
         String marsDescription = "The planet Mars is half the size of the Earth.";
         Number circumference = 21344;
-        Planet mars = new Planet(marsDescription, circumference);
+        Planet mars = new Planet(name, marsDescription, circumference);
 
         marsInfo.addObject("marsDescription", mars.getDescription() );
         marsInfo.addObject("marsCircumference", mars.getCircumference() );
